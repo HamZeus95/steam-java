@@ -30,7 +30,7 @@ public class Level3 {
         /* TO DO 5: Retourner une Map qui regroupe les nom des enseignants par salaire */
         Map<Integer, String> map1 = teachers.stream().collect(Collectors.groupingBy(
                 Teacher::getSalary,
-                Collectors.mapping(Teacher::getName, Collectors.joining(", "))
+                Collectors.mapping(Teacher::getName, Collectors.joining("&"))
         ));
         System.out.println("Map qui regroupe les enseignants par salaire : "+map1);
 
